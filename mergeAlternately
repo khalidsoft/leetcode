@@ -1,0 +1,17 @@
+class Solution {
+    public String mergeAlternately(String word1, String word2) {
+        int i=0;
+        int j=0;
+        int lword1 = word1.length();
+        int lword2 = word2.length();
+        StringBuffer stbMerged = new StringBuffer();
+        while(i<lword1 || j<lword2){
+            if(i<lword1)stbMerged.append(word1.charAt(i));
+            if(j<lword2)stbMerged.append(word2.charAt(j));
+            i++;
+            j++;
+        }
+        return stbMerged.toString();
+    }
+    
+}
